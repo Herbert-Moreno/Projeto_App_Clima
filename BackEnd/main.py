@@ -1,15 +1,38 @@
 from typing import Union
-
 from fastapi import FastAPI
+import requests
 
 app = FastAPI()
 
-
 @app.get("/")
-def read_root():
-    return {"Hello": "World"}
+def init():
+    return {"Hello": "World!"}
 
 
-@app.get("/items/{item_id}")
-def read_item(item_id: int, q: Union[str, None] = None):
-    return {"item_id": item_id, "q": q}
+@app.get("/{city}")
+def get_weather(city):
+    try:
+        chave_api = "7d44a33301d9ef6cb91a381dfe4c84b6"
+        link = "https://api.openweathermap.org/data/2.5/weather"
+
+        parametros = {
+            "cidade": city,
+            "id": chave_api
+        }
+
+        response = requests.get(link, params=parametros)
+        dados = response.json()
+
+        if response.status_code != 200:
+            return {"error": response.status_code}
+        
+        else:
+            dados_clima = {
+                "cidade": city,
+                "temperatura": round(dados["main"]["temp" - 273.15, 2]),
+                "clima": dados["weather"][0]["main"]
+
+            }
+            return dados_clima
+    except:
+        return {"404": "!!Cidade não encontrada!!"}
