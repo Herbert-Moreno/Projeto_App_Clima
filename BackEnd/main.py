@@ -8,11 +8,10 @@ app = FastAPI()
 def init():
     return {"Hello": "World!"}
 
-
 @app.get("/{city}")
 def get_weather(city):
     try:
-        chave_api = "7d44a33301d9ef6cb91a381dfe4c84b6"
+        chave_api = os.getenv("Api_key")
         link = "https://api.openweathermap.org/data/2.5/weather"
 
         parametros = {
