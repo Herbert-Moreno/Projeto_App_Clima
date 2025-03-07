@@ -7,4 +7,6 @@ RUN pip3 install -r requirements.txt
 
 COPY ./BackEnd /weatherapp
 
+EXPOSE 80
+
 CMD ["fastapi", "run", "main.py", "--port", "80"]
