@@ -1,6 +1,7 @@
 from typing import Union
 from fastapi import FastAPI
 import requests
+import os
 
 app = FastAPI()
 
@@ -12,7 +13,7 @@ def init():
 @app.get("/{city}")
 def get_weather(city):
     try:
-        chave_api = "API_KEY"
+        chave_api = os.getenv("API_KEY")
         link = "https://api.openweathermap.org/data/2.5/weather"
 
         parametros = {
