@@ -13,13 +13,16 @@ def init():
 @app.get("/{city}")
 def get_weather(city):
     try:
-        chave_api = os.getenv("API_KEY")
+        chave_api = os.environ.get("API_KEY")
         link = "https://api.openweathermap.org/data/2.5/weather"
 
         parametros = {
             "cidade": city,
             "id": chave_api
         }
+
+        if chave_api != '':
+            print(chave_api)
 
         response = requests.get(link, params=parametros)
         dados = response.json()
@@ -35,5 +38,6 @@ def get_weather(city):
 
             }
             return dados_clima
+        
     except:
         return {"404": "!!Cidade não encontrada!!"}
