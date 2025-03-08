@@ -14,17 +14,12 @@ def init():
 def get_weather(city):
     try:
         chave_api = os.environ.get("API_KEY")
-        link = "https://api.openweathermap.org/data/2.5/weather"
+        link = f"https://api.openweathermap.org/data/2.5/weather?q={city}&appid={chave_api}"
 
-        parametros = {
-            "q": city,
-            "appid": chave_api
-        }
+        if chave_api == '':
+            return {"error": "Chave API Errada"}
 
-        if chave_api != '':
-            print(chave_api)
-
-        response = requests.get(link, params=parametros)
+        response = requests.get(link)
         dados = response.json()
 
         if response.status_code != 200:
@@ -33,11 +28,12 @@ def get_weather(city):
         else:
             dados_clima = {
                 "cidade": city,
-                "temperatura": round(dados["main"]["temp" - 273.15, 2]),
+                "temperatura": round(dados["main"]["temp"] - 273.15, 2),
                 "clima": dados["weather"][0]["main"]
 
             }
             return dados_clima
         
-    except:
+    except Exception as err:
+        print(err)
         return {"404": "!!Cidade não encontrada!!"}
