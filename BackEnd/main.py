@@ -17,8 +17,8 @@ def get_weather(city):
         link = "https://api.openweathermap.org/data/2.5/weather"
 
         parametros = {
-            "cidade": city,
-            "id": chave_api
+            "q": city,
+            "appid": chave_api
         }
 
         if chave_api != '':
