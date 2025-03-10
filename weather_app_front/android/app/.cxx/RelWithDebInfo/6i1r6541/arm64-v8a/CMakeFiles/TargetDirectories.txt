@@ -1,0 +1,2 @@
+C:/Users/joseh.EMANUELLE/Pictures/Projects/WeatherApp/weather_app_front/android/app/.cxx/RelWithDebInfo/6i1r6541/arm64-v8a/CMakeFiles/edit_cache.dir
+C:/Users/joseh.EMANUELLE/Pictures/Projects/WeatherApp/weather_app_front/android/app/.cxx/RelWithDebInfo/6i1r6541/arm64-v8a/CMakeFiles/rebuild_cache.dir

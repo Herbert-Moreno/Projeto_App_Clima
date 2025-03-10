@@ -1,16 +1,80 @@
-# weather_app
+![](./GitAssets/App_Icon.png)
+# Projeto de Aplicativo mobile de Clima - Formalmente: WeatherApp
 
-A new Flutter project.
+WeatherApp é um aplicativo de previsão do tempo desenvolvido em Flutter, utilizando a API do OpenWeather para obter dados meteorológicos e um backend FastAPI com Python 3.13 para processamento.
 
-## Getting Started
+## 📷 Ilustrações
 
-This project is a starting point for a Flutter application.
+|        Tela Inicial       |
+| ------------------------- |
+| ![](./GitAssets/test.png) |
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+|        Tela Mockup        |
+| ------------------------- |
+|![](./GitAssets/Mockup.png)|
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 📱 Figma 
+
+![](./GitAssets/Figma.png)
+
+## 📌 Funcionalidades
+
+- Exibição de previsão do tempo em tempo real.
+- Busca por cidade na barra de pesquisa.
+- Interface moderna e responsiva.
+- Exibição da sensação térmica em tempo real.
+
+## 🛠️ Tecnologias Utilizadas
+
+### 📱 Frontend (Flutter)
+
+- Flutter 3.29
+- Dart
+- Dart HTTP para requisições
+- Figma para idealização e Mockups
+
+### 🌐 Backend (FastAPI)
+
+- FastAPI
+- Python 3.13
+- Requests para consumo da API OpenWeather
+
+## 🚀 Como Rodar o Projeto
+
+### 📲 Frontend Local
+```bash
+# Clone o repositório
+git clone https://github.com/Herbert-Moreno/Projeto_App_Clima.git
+cd Projeto_App_Clima
+
+# Instale as dependências
+dart pub get
+
+# Execute o app
+flutter run main.dart
+```
+
+### 🔧 Backend
+```bash
+# Clone o repositório do backend
+git clone https://github.com/Herbert-Moreno/Projeto_App_Clima.git
+cd Projeto_App_Clima
+
+# Crie um ambiente virtual e instale dependências
+python -m venv venv
+source venv/bin/activate  # Linux/macOS
+venv\Scripts\activate  # Windows
+pip install -r requirements.txt
+```
+## Inciciando o Servidor FastApi
+Inciciar o servidor web FastApi:
+![](./GitAssets/StartCommand.png)
+
+- output:
+![](./GitAssets/ServerRunning.png)
+
+
+## 🌍 API Utilizada
+
+- [OpenWeather](https://openweathermap.org/) - Utilizada para obter dados climáticos.
