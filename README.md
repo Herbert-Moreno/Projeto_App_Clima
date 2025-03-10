@@ -1,19 +1,13 @@
-<img src="./GitAssets/App_Icon.png" width="40%">
-
-# Projeto de Aplicativo mobile de Clima - Formalmente: WeatherApp
+<img src="./GitAssets/App_Icon.png" width="20%"> # Projeto de Aplicativo mobile de Clima - Formalmente: WeatherApp
 
 WeatherApp é um aplicativo de previsão do tempo desenvolvido em Flutter, utilizando a API do OpenWeather para obter dados meteorológicos e um backend FastAPI com Python 3.13 para processamento.
 
 ## 📷 Ilustrações
 
-|    Tela Inicial    |
-| -------------------|
-|<img src="./GitAssets/test.png" width="60%">|
+|    Tela Inicial    |    |    Tela Mockup    |
+| ------------------ |    | ----------------- |
+|<img src="./GitAssets/test.png" width="40%">| |<img src="./GitAssets/Mockup.png" width="40%">|
 
-
-|    Tela Mockup    |
-| -------------------|
-|<img src="./GitAssets/Mockup.png" width="60%">|
 
 ## 📱 Figma 
 
