@@ -1,14 +1,12 @@
 from typing import Union
 from fastapi import FastAPI
 import requests
-import os
 
 app = FastAPI()
 
 @app.get("/")
 def init():
     return {"Hello": "World!"}
-
 
 @app.get("/{city}")
 def get_weather(city):
@@ -27,13 +25,12 @@ def get_weather(city):
         
         else:
             dados_clima = {
-                "cidade": city,
-                "temperatura": round(dados["main"]["temp"] - 273.15, 2),
-                "clima": dados["weather"][0]["main"]
-
+                "city": city,
+                "temperature": str(int(dados["main"]["temp"] - 273.15)),
+                "state": str(dados["weather"][0]["main"]).lower()
             }
             return dados_clima
         
     except Exception as err:
         print(err)
-        return {"404": "!!Cidade não encontrada!!"}
+        return {"404": "!!City Not Found!!"}
