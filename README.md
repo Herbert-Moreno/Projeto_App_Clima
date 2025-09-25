@@ -61,10 +61,12 @@ pip install -r requirements.txt
 ```
 ## Inciciando o Servidor FastApi
 
-- termina:
+- terminal:
+
 ![](./GitAssets/StartCommand.png)
 
 - output:
+
 ![](./GitAssets/ServerRunning.png)
 
 
