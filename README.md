@@ -1,18 +1,18 @@
 # Projeto de Aplicativo mobile de Clima - Formalmente: Climatize 
-<img src="./GitAssets/App_Icon.png" width="10%" style="margin=auto;">
+<img src="./GitAssets/App_icon.png" width="10%" style="margin=auto;">
 
 WeatherApp é um aplicativo de previsão do tempo para android desenvolvido com Jetpack Compose, utilizando a API do OpenWeather para obter dados meteorológicos e um backend FastAPI com Python 3.11 para processamento.
 
 ## 📷 Ilustrações
 -             Tela Mockup 
-<img src="./GitAssets/Mockup.png" width="45%">
+<img src="./GitAssets/ProductMockup.png" width="45%">
 
 -             Tela Final
-<img src="./GitAssets/test.png" width="40%"> 
+<img src="./GitAssets/FinalProduct.png" width="40%"> 
 
 ## 📱 Figma 
 
-![](./GitAssets/Figma.png)
+![](./GitAssets/Figma_layout.png)
 
 ## 📌 Funcionalidades
 
@@ -42,13 +42,9 @@ WeatherApp é um aplicativo de previsão do tempo para android desenvolvido com 
 ```bash
 # Clone o repositório
 git clone https://github.com/Herbert-Moreno/Projeto_App_Clima.git
-cd Projeto_App_Clima
 
-# Instale as dependências
-dart pub get
-
-# Execute o app
-flutter run main.dart
+# usando o android studio ou o IdealC
+# de um gradle sync e incie uma instancia do android emulator com o app.
 ```
 
 ### 🔧 Backend
