@@ -1,5 +1,5 @@
 # Projeto de Aplicativo mobile de Clima - Formalmente: Climatize 
-<img src="./GitAssets/App_icon.png" width="10%" style="margin=auto;">
+<img src="./GitAssets/Icon.png" width="10%" style="margin=auto;">
 
 WeatherApp é um aplicativo de previsão do tempo para android desenvolvido com Jetpack Compose, utilizando a API do OpenWeather para obter dados meteorológicos e um backend FastAPI com Python 3.11 para processamento.
 
