@@ -11,7 +11,7 @@ def init():
 @app.get("/{city}")
 def get_weather(city):
     try:
-        chave_api = "3786cd5678c040322f407dfe9826c5f9"#os.environ.get("API_KEY")
+        chave_api = os.environ.get("API_KEY")
         link = f"https://api.openweathermap.org/data/2.5/weather?q={city}&appid={chave_api}"
 
         if chave_api == '':
